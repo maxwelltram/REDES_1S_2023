@@ -2,50 +2,56 @@
 
 _IP'S asignadas:_
 
-_SERVER RRHH - IP ASIGNADA:_
+_VPC VENTAS - IP ASIGNADA:_
 
-![Alt text](Server%20RRHH.jpg)
+![Alt text](VPC22.jpg)
 
-_SERVER PLANEACION - IP ASIGNADA:_
+_VPC INFORMATICA - IP ASIGNADA:_
 
-![Alt text](SERVER%20PLANEACION.jpg)
+![Alt text](VPC19.jpg)
 
-_SERVER FINANZAS - IP ASIGNADA:_
+_VPC RRHH - IP ASIGNADA:_
 
-![Alt text](SERVER%20FINANZAS.jpg)
+![Alt text](VPC20.jpg)
 
-_SERVER IT - IP ASIGNADA:_
+_VPC CONTABILIDAD - IP ASIGNADA:_
 
-![Alt text](SERVER%20IT.jpg)
+![Alt text](VPC21.jpg)
 
 _VLAN'S creadas:_
 
 _Se crean las vlan's 18, 28, 38 y 48, a través de las cuales se comunicaran las vpc's:_
 
-![Alt text](Resumen%20VLAN.jpg)
+Central :_
+
+![Alt text](vlans%20-%20jutiapa.jpg)
+
+_Jutiapa :_
+
+![Alt text](vlan%20jutiapaa.jpg)
 
 ## Implementación de las topologías
 
-_Data center:_
+_Jutiapa :_
 
 _El data center consta de 4 switch y 4 vpc's, cada una de ellas corresponde al server de cada area de la empresa:_
 
-![Alt text](Datacenter.jpg)
+![Alt text](TopologiaJutiapa.jpg)
 
 
-_Backbone:_
+_Core :_
 
 _El Backbone consta de 4 switch's conectados en forma de rombo y una vpc del area de IT, el SW6 corresponde al switch raíz el cual se encarga de hacer la conexión de todas las areas a través de las vlan's creadas:_
 
-![Alt text](Backbone.jpg)
+![Alt text](TopologiaCore.jpg)
 
 
 
-_Area de trabajo:_
+_Central :_
 
 _El area de trabajo  consta de 3 switch's conectados en forma de triangulo y 6 vpc's de diferentes areas, a través de las conexiones de los switch's al switch raíz se comunicarán:_
 
-![Alt text](Area%20de%20trabajo.jpg)
+![Alt text](TopologiaCentra.jpg)
 
 
 ## Detalle de comandos utilizados
@@ -62,11 +68,11 @@ _Utilizado para poner en modo cliente el switch:_
 
 _Utilizado para poner el dominio al cual se conectara el switch:_
 
-* vtp domain 201709328
+* vtp domain dominio
 
 _Utilizado para poner la contraseña  del dominio al cual se conectara el switch:_
 
-* vtp pass usac 
+* vtp pass contrasena
 
 _Utilizado para guardar los cambios:_
 
@@ -102,7 +108,7 @@ _Especificamos el número de VLAN:_
 
 _Especificamos el nombre que llevara la VLAN:_
 
-* PLANEACION
+* RRHH
 
 _Especificamos el número de VLAN:_
 
@@ -110,7 +116,7 @@ _Especificamos el número de VLAN:_
 
 _Especificamos el nombre que llevara la VLAN:_
 
-* FINANZAS 
+* CONTABILIDAD
 
 _Especificamos el número de VLAN:_
 
@@ -118,7 +124,7 @@ _Especificamos el número de VLAN:_
 
 _Especificamos el nombre que llevara la VLAN:_
 
-* RRHH
+* VENTAS
 
 _Especificamos el número de VLAN:_
 
@@ -126,7 +132,7 @@ _Especificamos el número de VLAN:_
 
 _Especificamos el nombre que llevara la VLAN:_
 
-* IT
+* INFORMATICA
 
 _Utilizado para guardar los cambios:_
 
@@ -154,21 +160,9 @@ _Se utiliza, para que el switch se especifique como el primero y se agregan las 
 
 ## Ping entre hosts
 
-_Topología de ping RRHH1 a RRHH SERVER :_
+_Paquete de wireshark VLAN:_
 
-![Alt text](Ping%201%20Topo.jpg)
-
-_Ping RRHH1 a RRHH server:_
-
-![Alt text](Ping%20RRHH.jpg)
-
-_Topología de ping Planeacion1 a Planeacion SERVER :_
-
-![Alt text](Ping2%20Topo.jpg)
-
-_Ping Planeacion1 a Planeacion SERVER:_
-
-![Alt text](Ping%202.jpg)
+![Alt text](Wireshark.jpg)
 
 
 

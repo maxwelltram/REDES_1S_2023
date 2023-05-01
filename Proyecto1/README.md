@@ -26,14 +26,14 @@ _Se crean las vlan's 18, 28, 38 y 48, a través de las cuales se comunicaran las
 
 ## Implementación de las topologías
 
-_Data center:_
+_Jutiapa :_
 
 _El data center consta de 4 switch y 4 vpc's, cada una de ellas corresponde al server de cada area de la empresa:_
 
-![Alt text](Datacenter.jpg)
+![Alt text](TopologiaJutiapa.jpg)
 
 
-_Backbone:_
+_Central:_
 
 _El Backbone consta de 4 switch's conectados en forma de rombo y una vpc del area de IT, el SW6 corresponde al switch raíz el cual se encarga de hacer la conexión de todas las areas a través de las vlan's creadas:_
 
@@ -41,7 +41,7 @@ _El Backbone consta de 4 switch's conectados en forma de rombo y una vpc del are
 
 
 
-_Area de trabajo:_
+_Core :_
 
 _El area de trabajo  consta de 3 switch's conectados en forma de triangulo y 6 vpc's de diferentes areas, a través de las conexiones de los switch's al switch raíz se comunicarán:_
 
